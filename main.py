@@ -18,6 +18,7 @@ class CommandManager:
         setup_commands: list[str] = [
             f'cp -r nvim {self.home_dir}/.config/nvim/',
             f'cp .bashrc {self.home_dir}/',
+            'fisher install IlanCosman/tide@v5',
         ]
         self.run_commands(setup_commands)
 
@@ -26,6 +27,8 @@ class CommandManager:
         fresh_commands: list[str] = [
             'sudo pacman -Syu',
             'sudo pacman -S neovim',
+            'sudo pacman -S fish',
+            'curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher',
         ]
 
         self.run_commands(fresh_commands)
@@ -42,7 +45,8 @@ class CommandManager:
 
 def main():
     print("*Welcome to Arch Setup*\n\nOptions:")
-    print("1. Fresh Arch Install")
+    print("1. Full Install")
+    print("1. Package Install")
     print("2. Rewrite Packages")
     print("3. Pull Packages Locally")
     print("4. Exit")
@@ -53,6 +57,9 @@ def main():
     cmd = CommandManager();
 
     match s:
+        case '0':
+            cmd.fresh_install()
+            cmd.rewrite_setup()
         case '1': # Fresh Install Packages
             cmd.fresh_install()
         case '2': # Rewrite Entire Setup
