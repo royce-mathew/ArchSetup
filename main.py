@@ -2,6 +2,11 @@ import os
 import subprocess
 from pathlib import Path
 
+
+# You need to install a nerd font
+# Install Node
+# Install tree-sitter cli with Cargo
+
 class CommandManager:
     def __init__(self): # Constructor
         self.file_path = Path(__file__).parent.absolute() # Get Path of the running directory
