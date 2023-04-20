@@ -449,3 +449,4 @@ set -g @continuum-restore 'on'
 set -g @continuum-save-interval '15'
 set -g @continuum-restore 'on'
 set-option -g status-position top
+setw -g mouse on
