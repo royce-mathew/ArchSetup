@@ -20,6 +20,18 @@ return require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter'
   use 'lewis6991/gitsigns.nvim'
   use 'wakatime/vim-wakatime'
+  -- Auto completion
+  use 'williamboman/mason.nvim'
+  -- completion
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+  use "rafamadriz/friendly-snippets"
+  use "williamboman/mason.nvim"
+  use "neovim/nvim-lspconfig"
+  use "williamboman/mason-lspconfig.nvim"
+  use "glepnir/lspsaga.nvim"
 
   use {
 	  'nvim-telescope/telescope.nvim',
