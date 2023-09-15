@@ -5,6 +5,7 @@ tmux dotfiles: https://github.com/gpakosz/.tmux
 p10k
 ```
 
+Also Install `nerd-fonts`
 
 # Fixing nvidia display issue
 1. `sudo pacman -S nvidia`
