@@ -18,3 +18,7 @@ Also Install `nerd-fonts`
   ```
     grub-mkconfig -o /boot/grub/grub.cfg
   ```
+
+
+pacman.conf
+Add `ILoveCandy` and `ParallelDownloads=5`
